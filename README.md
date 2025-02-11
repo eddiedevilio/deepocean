@@ -20,7 +20,7 @@ Ensure Node.js and npm are installed. We recommend using nvm for installation.
 sh
 Copy
 # Clone the repository
-git clone https://github.com/ahmedadilme/oceanblue
+git clone https://github.com/eddiedevilio/oceanblue
 
 # Navigate into the project directory
 cd oceanblue
