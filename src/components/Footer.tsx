@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <h3 className="text-xl font-bold">KaafuCruise</h3>
+            <h3 className="text-xl font-bold">Macros Speed</h3>
             <p className="text-ocean-light">
               Your trusted partner for speedboat transfers in the Maldives.
             </p>

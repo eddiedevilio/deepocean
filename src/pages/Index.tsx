@@ -9,12 +9,16 @@ import ScrollToTop from "@/components/ScrollToTop";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Phone } from "lucide-react";
 import Services from "@/components/Services";
 
 const Index = () => {
   const isMobile = useIsMobile();
   const [isFormOpen, setIsFormOpen] = useState(false);
+
+  const handleCall = () => {
+    window.location.href = "tel:+9607752330"; 
+  };
 
   return (
     <main className="min-h-screen">
@@ -23,6 +27,17 @@ const Index = () => {
         <Hero />
         {isMobile ? (
           <>
+            {/* Call Button */}
+            <div className="fixed bottom-20 left-4 z-50">
+              <Button
+                onClick={handleCall}
+                className="bg-green-600 hover:bg-green-700 transition-colors duration-300 rounded-full w-12 h-12"
+              >
+                <Phone className="h-6 w-6" />
+              </Button>
+            </div>
+
+            {/* Book Now Button */}
             <div className="fixed bottom-4 right-4 z-50">
               <Button
                 onClick={() => setIsFormOpen(!isFormOpen)}
@@ -39,6 +54,8 @@ const Index = () => {
                 )}
               </Button>
             </div>
+
+            {/* Booking Form */}
             <div
               className={`fixed top-0 right-0 h-full w-full max-w-md z-40 transform transition-transform duration-300 ease-in-out ${
                 isFormOpen ? "translate-x-0" : "translate-x-full"
